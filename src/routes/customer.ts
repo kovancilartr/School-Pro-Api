@@ -2,7 +2,7 @@ import {
   createCustomer,
   getCustomerById,
   getCustomers,
-} from "@/controllers/customers";
+} from "../controllers/customers";
 import express from "express";
 const customerRouter = express.Router();
 

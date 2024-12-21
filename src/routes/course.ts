@@ -5,7 +5,7 @@ import {
   createCourseSection,
   createPurchase,
   createSectionChapter,
-} from "@/controllers/course.create";
+} from "../controllers/course.create";
 import {
   deleteAttachment,
   deleteCategory,
@@ -13,7 +13,7 @@ import {
   deleteCourse,
   deletePurchase,
   deleteSection,
-} from "@/controllers/course.delete";
+} from "../controllers/course.delete";
 import {
   getAllCourses,
   getAllSections,
@@ -21,7 +21,7 @@ import {
   getAllChapters,
   getAllAttachments,
   getAllPurchases,
-} from "@/controllers/course.fetch";
+} from "../controllers/course.fetch";
 import express from "express";
 
 const courseRouter = express.Router();
