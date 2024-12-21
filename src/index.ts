@@ -2,7 +2,6 @@ import express from "express";
 import customerRouter from "./routes/customer";
 import userRouter from "./routes/user";
 import courseRouter from "./routes/course";
-import serverless from "serverless-http";
 import bodyParser from "body-parser";
 
 require("dotenv").config();
@@ -19,8 +18,8 @@ app.use(express.json());
 app.listen(PORT, () => {
   console.log(`Server is running on http://localhost:${PORT}`);
 });
-app.get("/test", (req, res) => {
-  res.send("Hello World!");
+app.get("/", (req, res) => {
+  res.send("School Pro API Server is running");
 });
 app.use("/api/v1", customerRouter);
 app.use("/api/v1", userRouter);
