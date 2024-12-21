@@ -2,12 +2,15 @@ import express from "express";
 import customerRouter from "./routes/customer";
 import userRouter from "./routes/user";
 import courseRouter from "./routes/course";
+import serverless from "serverless-http";
+import bodyParser from "body-parser";
 
 require("dotenv").config();
 const cors = require("cors");
 const app = express();
 
 app.use(cors());
+app.use(bodyParser.json());
 
 const PORT = process.env.PORT || 8000;
 
@@ -22,3 +25,5 @@ app.get("/test", (req, res) => {
 app.use("/api/v1", customerRouter);
 app.use("/api/v1", userRouter);
 app.use("/api/v1", courseRouter);
+
+export const handler = serverless(app); // Vercel'in desteklediği format
