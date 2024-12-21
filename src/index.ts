@@ -26,4 +26,4 @@ app.use("/api/v1", customerRouter);
 app.use("/api/v1", userRouter);
 app.use("/api/v1", courseRouter);
 
-export const handler = serverless(app); // Vercel'in desteklediği format
+export default app;
