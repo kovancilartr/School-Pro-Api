@@ -1,5 +1,4 @@
 import { db } from "@/db/prisma";
-import { Request, Response } from "express";
 
 export async function createCustomer(req: any, res: any) {
   const { name, email, phone } = req.body;

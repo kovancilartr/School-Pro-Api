@@ -1,5 +1,4 @@
 import { db } from "@/db/prisma";
-import { Request, Response } from "express";
 import { clerkClient } from "@clerk/clerk-sdk-node";
 import { Role } from "@prisma/client";
 

@@ -1,5 +1,4 @@
 import { db } from "@/db/prisma";
-import { Request, Response } from "express";
 
 export async function getAllCourses(req: any, res: any) {
   try {
