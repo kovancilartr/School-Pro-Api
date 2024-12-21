@@ -16,6 +16,9 @@ app.use(express_1.default.json());
 app.listen(PORT, () => {
     console.log(`Server is running on http://localhost:${PORT}`);
 });
+app.get("/test", (req, res) => {
+    res.send("Hello World!");
+});
 app.use("/api/v1", customer_1.default);
 app.use("/api/v1", user_1.default);
 app.use("/api/v1", course_1.default);
