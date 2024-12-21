@@ -1,4 +1,4 @@
-import { db } from "@/db/prisma";
+import { db } from "../db/prisma";
 
 export async function getAllCourses(req: any, res: any) {
   try {

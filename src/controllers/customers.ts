@@ -1,4 +1,4 @@
-import { db } from "@/db/prisma";
+import { db } from "../db/prisma";
 
 export async function createCustomer(req: any, res: any) {
   const { name, email, phone } = req.body;
