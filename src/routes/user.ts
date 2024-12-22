@@ -1,4 +1,12 @@
-import { createUser, deleteUser, getAllAdmins, getAllStudents, getAllTeachers, getAllUsers, getUserById } from "../controllers/user";
+import { createUser } from "@/controllers/User/user.create";
+import { deleteUser } from "@/controllers/User/user.delete";
+import {
+  getAllAdmins,
+  getAllStudents,
+  getAllTeachers,
+  getAllUsers,
+  getUserById,
+} from "@/controllers/User/user.fetch";
 import express from "express";
 
 const userRouter = express.Router();
