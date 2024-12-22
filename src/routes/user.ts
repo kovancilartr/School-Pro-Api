@@ -1,5 +1,5 @@
-import { createUser } from "@/controllers/User/user.create";
-import { deleteUser } from "@/controllers/User/user.delete";
+import { createUser } from "../controllers/User/user.create";
+import { deleteUser } from "../controllers/User/user.delete";
 import {
   getAllAdmins,
   getAllStudents,

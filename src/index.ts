@@ -3,6 +3,7 @@ import userRouter from "./routes/user";
 import courseRouter from "./routes/course";
 import bodyParser from "body-parser";
 
+
 require("dotenv").config();
 const cors = require("cors");
 const app = express();
