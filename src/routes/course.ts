@@ -7,10 +7,9 @@ import { getAllCategories } from "@/controllers/Category/category.fetch";
 import { createChapter } from "@/controllers/Chapter/chapter.create";
 import { deleteChapter } from "@/controllers/Chapter/chapter.delete";
 import { getAllChapters } from "@/controllers/Chapter/chapter.fetch";
-import { getCourse, getCourses } from "@/controllers/course.fetch";
 import { createCourse } from "@/controllers/Course/course.create";
 import { deleteCourse } from "@/controllers/Course/course.delete";
-import { getAllCourses } from "@/controllers/Course/course.fetch";
+import { getAllCourses, getCourse, getUserCoursesWithProgress } from "@/controllers/Course/course.fetch";
 import { createPurchase } from "@/controllers/Purchase/purchase.create";
 import { deletePurchase } from "@/controllers/Purchase/purchase.delete";
 import { getAllPurchases } from "@/controllers/Purchase/purchase.fetch";
@@ -21,6 +20,8 @@ import express from "express";
 
 const courseRouter = express.Router();
 
+
+
 // POST
 courseRouter.post("/course/create/:categoryId", createCourse);
 courseRouter.post("/course/category/create", createCategory);
@@ -29,10 +30,10 @@ courseRouter.post("/course/chapter/create/:sectionId", createChapter);
 courseRouter.post("/course/purchase/create/:courseId&:userId", createPurchase);
 courseRouter.post("/course/attachment/create/:courseId", createAttachment);
 
-// GET
+// FETCH
 courseRouter.get("/course/all", getAllCourses);
 courseRouter.get("/course/get-course", getCourse);
-courseRouter.get("/course/get-courses", getCourses);
+courseRouter.get("/course/get-user-courses-with-progress", getUserCoursesWithProgress);
 courseRouter.get("/course/category/all", getAllCategories);
 courseRouter.get("/course/section/all", getAllSections);
 courseRouter.get("/course/chapter/all", getAllChapters);
