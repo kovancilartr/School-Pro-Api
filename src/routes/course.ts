@@ -22,6 +22,7 @@ import {
   getAllAttachments,
   getAllPurchases,
   getCourses,
+  getCourse,
 } from "../controllers/course.fetch";
 import express from "express";
 
@@ -37,7 +38,8 @@ courseRouter.post("/course/attachment/create/:courseId", createAttachment);
 
 // GET
 courseRouter.get("/course/all", getAllCourses);
-courseRouter.get("/course/get", getCourses);
+courseRouter.get("/course/get-course", getCourse);
+courseRouter.get("/course/get-courses", getCourses);
 courseRouter.get("/course/category/all", getAllCategories);
 courseRouter.get("/course/section/all", getAllSections);
 courseRouter.get("/course/chapter/all", getAllChapters);
