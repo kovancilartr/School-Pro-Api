@@ -6,7 +6,7 @@ import {
   getAllTeachers,
   getAllUsers,
   getUserById,
-} from "@/controllers/User/user.fetch";
+} from "../controllers/User/user.fetch";
 import express from "express";
 
 const userRouter = express.Router();
